@@ -28,4 +28,4 @@ Things you may want to cover:
 To run program
    * run -> rails db:seed
    * Hit the POST api/v1/parcel API from postman
-   * In API send parameters like weight: 100, volume: 1, train_id: 1
+   * In API send parameters like weight: 100, volume: 1, train_id: 1, user_id: 1

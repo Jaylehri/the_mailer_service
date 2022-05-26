@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_25_103024) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_26_115757) do
   create_table "lines", force: :cascade do |t|
     t.string "source"
     t.string "destination"
@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_25_103024) do
 
   create_table "parcels", force: :cascade do |t|
     t.integer "train_id"
+    t.integer "user_id"
     t.decimal "volume"
     t.decimal "weight"
     t.decimal "cost"
@@ -35,6 +36,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_25_103024) do
     t.decimal "total_volume"
     t.decimal "cost"
     t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

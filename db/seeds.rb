@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+users = [{name: 'test user', email: 'test@gmail.com'}]
+
+users.each do |user|
+  User.create(user)
+end
+
 lines = [{source: "A", destination: "B", status: 0},
   {source: "B", destination: "C", status: 0},
   {source: "C",destination: 'A', status: 0},
